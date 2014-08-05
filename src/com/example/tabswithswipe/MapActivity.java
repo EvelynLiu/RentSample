@@ -96,7 +96,7 @@ public class MapActivity extends Activity implements LocationListener{
 		// TODO Auto-generated method stub
 		super.onResume();
 		String best = mgr.getBestProvider(new Criteria(), true);
-		if(best != null){
+		if(best != null && mgr.getLastKnownLocation(best) != null){
 			txv.setText("取得定位資訊中...");
 			//mgr.requestLocationUpdates(best, MIN_TIME, MIN_DIST, this);
 			mgr.requestLocationUpdates(LocationManager.GPS_PROVIDER, 0, 0, this);

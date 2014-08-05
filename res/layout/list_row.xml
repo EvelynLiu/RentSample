@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/list_bg" >
+	<ImageView
+        android:id="@+id/image"
+        android:layout_width="80dp"
+        android:layout_height="80dp"
+        android:layout_centerVertical="true"
+        android:layout_margin="5dp"
+        android:background="#444"
+        android:padding="3dp" 
+        android:contentDescription="pic_house"/>
+
+	<!-- tvprice -->
+    <TextView
+        android:id="@+id/tvtitle" 
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="5dip"
+        android:layout_toRightOf="@+id/image"
+        android:maxLines="1"
+        android:text="price"
+        android:textColor="@android:color/black"
+        android:textSize="15sp"
+        android:textStyle="bold" />
+
+    <TextView
+        android:id="@+id/tvaddress"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/tvprice"
+        android:layout_toLeftOf="@+id/imageView1"
+        android:layout_toRightOf="@+id/image"
+        android:ellipsize="end"
+        android:maxLines="3"
+        android:text="address"
+        android:textColor="@android:color/black"
+        android:textSize="13sp" />
+	
+    <TextView
+        android:id="@+id/tvdesc"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/tvaddress"
+        android:layout_toLeftOf="@+id/imageView1"
+        android:layout_toRightOf="@+id/image"
+        android:ellipsize="end"
+        android:maxLines="3"
+        android:text="desc"
+        android:textColor="@android:color/black"
+        android:textSize="13sp" />
+    
+    <ProgressBar
+        android:id="@+id/pbar"
+        style="?android:attr/progressBarStyleSmall"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignRight="@+id/image"
+        android:layout_centerVertical="true"
+        android:layout_marginRight="30dp" />
+
+    <ImageView
+        android:id="@+id/imageView1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_centerVertical="true"
+        android:layout_marginRight="3dp"
+        android:src="@drawable/imgright" 
+        android:contentDescription="right_arrow"/>
+
+    <!-- tvType -->
+    <TextView
+        android:id="@+id/tvdate"  
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/tvaddress"
+        android:layout_marginLeft="20dp"
+        android:layout_toRightOf="@+id/tvprice"
+        android:textSize="13sp"
+        android:text="type" />
+
+    <TextView
+        android:id="@+id/tvsize"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/tvaddress"
+        android:layout_marginLeft="17dp"
+        android:layout_toRightOf="@+id/tvtype"
+        android:textSize="13sp"
+        android:text="size" />
+
+</RelativeLayout>

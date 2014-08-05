@@ -327,6 +327,7 @@ containing a value of this type.
         public static final int zOrderOnTop=0x7f010010;
     }
     public static final class color {
+        public static final int blue=0x7f060017;
         public static final int common_action_bar_splitter=0x7f060009;
         /**  Sign-in Button Colors 
          */
@@ -339,8 +340,9 @@ containing a value of this type.
         public static final int common_signin_btn_light_text_disabled=0x7f060006;
         public static final int common_signin_btn_light_text_focused=0x7f060007;
         public static final int common_signin_btn_light_text_pressed=0x7f060005;
-        public static final int common_signin_btn_text_dark=0x7f060017;
-        public static final int common_signin_btn_text_light=0x7f060018;
+        public static final int common_signin_btn_text_dark=0x7f060019;
+        public static final int common_signin_btn_text_light=0x7f06001a;
+        public static final int grey=0x7f060018;
         public static final int wallet_bright_foreground_disabled_holo_light=0x7f06000f;
         /** 
          Wallet colors to support consistent Wallet fragment holo dark UI in client application
@@ -359,8 +361,8 @@ containing a value of this type.
         public static final int wallet_hint_foreground_holo_light=0x7f060011;
         public static final int wallet_holo_blue_light=0x7f060015;
         public static final int wallet_link_text_light=0x7f060016;
-        public static final int wallet_primary_text_holo_light=0x7f060019;
-        public static final int wallet_secondary_text_holo_dark=0x7f06001a;
+        public static final int wallet_primary_text_holo_light=0x7f06001b;
+        public static final int wallet_secondary_text_holo_dark=0x7f06001c;
     }
     public static final class dimen {
         /**  Default screen margins, per the Android Design guidelines. 
@@ -403,14 +405,17 @@ containing a value of this type.
         public static final int ic_plusone_small_off_client=0x7f02001a;
         public static final int ic_plusone_standard_off_client=0x7f02001b;
         public static final int ic_plusone_tall_off_client=0x7f02001c;
-        public static final int powered_by_google_dark=0x7f02001d;
-        public static final int powered_by_google_light=0x7f02001e;
+        public static final int imgright=0x7f02001d;
+        public static final int list_bg=0x7f02001e;
+        public static final int powered_by_google_dark=0x7f02001f;
+        public static final int powered_by_google_light=0x7f020020;
+        public static final int profile=0x7f020021;
     }
     public static final class id {
         public static final int RelativeLayout1=0x7f070017;
-        public static final int action_settings=0x7f070024;
+        public static final int action_settings=0x7f07002a;
         public static final int book_now=0x7f070010;
-        public static final int buy=0x7f070023;
+        public static final int buy=0x7f070029;
         public static final int buyButton=0x7f07000a;
         public static final int buy_now=0x7f07000f;
         public static final int buy_with_google=0x7f07000e;
@@ -419,29 +424,35 @@ containing a value of this type.
         public static final int holo_dark=0x7f070005;
         public static final int holo_light=0x7f070006;
         public static final int hybrid=0x7f070004;
-        public static final int listAddress=0x7f07001f;
-        public static final int listImage=0x7f07001b;
-        public static final int listMemo=0x7f070020;
-        public static final int listPrice=0x7f07001c;
-        public static final int listSize=0x7f07001e;
-        public static final int listType=0x7f07001d;
+        public static final int image=0x7f07001f;
+        public static final int imageView1=0x7f070022;
+        public static final int imgdesc=0x7f07001b;
         public static final int map=0x7f07001a;
         public static final int mapView=0x7f070016;
         public static final int match_parent=0x7f07000c;
         public static final int monochrome=0x7f070013;
-        public static final int nearby=0x7f070021;
+        public static final int nearby=0x7f070027;
         public static final int none=0x7f070000;
         public static final int normal=0x7f070001;
         public static final int pager=0x7f070014;
+        public static final int pbar=0x7f070023;
+        public static final int pbardesc=0x7f07001e;
         public static final int production=0x7f070007;
         public static final int rechoose=0x7f070018;
-        public static final int rent=0x7f070022;
+        public static final int rent=0x7f070028;
         public static final int sandbox=0x7f070008;
         public static final int satellite=0x7f070002;
         public static final int selectionDetails=0x7f07000b;
         public static final int strict_sandbox=0x7f070009;
         public static final int terrain=0x7f070003;
         public static final int title_text=0x7f070019;
+        public static final int tvaddress=0x7f070020;
+        public static final int tvdate=0x7f070024;
+        public static final int tvdesc=0x7f07001c;
+        public static final int tvprice=0x7f070021;
+        public static final int tvsize=0x7f070025;
+        public static final int tvtitle=0x7f07001d;
+        public static final int tvtype=0x7f070026;
         public static final int txv=0x7f070015;
         public static final int wrap_content=0x7f07000d;
     }
@@ -453,10 +464,11 @@ containing a value of this type.
         public static final int activity_map=0x7f030001;
         public static final int collect=0x7f030002;
         public static final int custom_actionbar=0x7f030003;
-        public static final int custom_list_item=0x7f030004;
-        public static final int member=0x7f030005;
-        public static final int more=0x7f030006;
-        public static final int search=0x7f030007;
+        public static final int item_detail=0x7f030004;
+        public static final int list_row=0x7f030005;
+        public static final int member=0x7f030006;
+        public static final int more=0x7f030007;
+        public static final int search=0x7f030008;
     }
     public static final class menu {
         public static final int main=0x7f0a0000;

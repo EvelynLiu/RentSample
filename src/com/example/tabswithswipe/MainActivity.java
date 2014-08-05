@@ -93,7 +93,7 @@ public class MainActivity extends FragmentActivity implements ActionBar.TabListe
     
     public void showMapActivity(View view) {
 		Intent intent = new Intent(this, MapActivity.class);
-		//傳List內容到Map
+		//傳List內容到Map or server重新撈資料
 		//ListView listView = (ListView) findViewById(R.id.listView1);
 		startActivity(intent);
 	}
