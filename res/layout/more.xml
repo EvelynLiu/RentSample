@@ -5,6 +5,14 @@
     android:background="#3DD"
     android:orientation="vertical" >
     
+    <NumberPicker
+        android:id="@+id/npicker"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:scrollbarAlwaysDrawVerticalTrack="true"
+        android:scrollbarStyle="insideOverlay"
+        android:scrollbars="vertical" />
+
      <TextView android:layout_width="fill_parent"
         android:layout_height="wrap_content"
         android:gravity="center"

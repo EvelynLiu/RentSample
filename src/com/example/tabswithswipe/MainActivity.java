@@ -2,6 +2,7 @@ package com.example.tabswithswipe;
 
 import com.example.tabswithswipe.adapter.TabsPagerAdapter;
 
+import android.R.anim;
 import android.app.Activity;
 import android.app.ActionBar;
 import android.app.ActionBar.Tab;
@@ -9,13 +10,18 @@ import android.app.FragmentTransaction;
 import android.content.Intent;
 import android.content.pm.ActivityInfo;
 import android.graphics.drawable.ColorDrawable;
+import android.hardware.display.DisplayManager;
 import android.os.Bundle;
 import android.support.v4.app.*;
 import android.support.v4.view.ViewPager;
+import android.view.Display;
+import android.view.KeyEvent;
 import android.view.LayoutInflater;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
+import android.view.Window;
+import android.webkit.WebView;
 import android.widget.ListView;
 import android.widget.Toast;
 
@@ -25,12 +31,14 @@ public class MainActivity extends FragmentActivity implements ActionBar.TabListe
 	private ViewPager viewPager;
 	private TabsPagerAdapter mAdapter;
 	private ActionBar actionBar;
+	
 	//tab titles
 	private String[] tabs = {"搜尋","收藏案件","會員刊登","更多"};
 	
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+        getWindow().requestFeature(Window.FEATURE_PROGRESS);//loading進度表
         setContentView(R.layout.activity_main);
         setRequestedOrientation(ActivityInfo.SCREEN_ORIENTATION_PORTRAIT);
         //Initialization
@@ -46,12 +54,18 @@ public class MainActivity extends FragmentActivity implements ActionBar.TabListe
         actionBar.setNavigationMode(ActionBar.NAVIGATION_MODE_TABS);
         
         //Customize Action Bar
-        actionBar.setDisplayShowHomeEnabled(false);
+        //actionBar.setDisplayHomeAsUpEnabled(false);
+        //actionBar.setDisplayShowHomeEnabled(true);
+        //actionBar.setDisplayUseLogoEnabled(false);
+        //((View)findViewById(android.R.id.home).getParent()).setVisibility(View.GONE);
+        getActionBar().setIcon(android.R.color.transparent);
+        actionBar.setLogo(android.R.color.transparent);
         actionBar.setDisplayShowTitleEnabled(false);
         LayoutInflater mInflater = LayoutInflater.from(this);
         View mCustomView = mInflater.inflate(R.layout.custom_actionbar, null);
         actionBar.setCustomView(mCustomView);
         actionBar.setDisplayShowCustomEnabled(true);
+        //getActionBar().setDisplayOptions(0,ActionBar.DISPLAY_SHOW_HOME);
         
         //Adding Tabs
         for(String tab_name: tabs){
@@ -116,21 +130,28 @@ public class MainActivity extends FragmentActivity implements ActionBar.TabListe
         }
         return super.onOptionsItemSelected(item);
     }
-
-
+    
+    @Override
+    public boolean onKeyDown(int keyCode, KeyEvent event){
+    	WebView wv = (WebView) findViewById(R.id.wv);
+    	if(keyCode == KeyEvent.KEYCODE_BACK && wv.canGoBack()){
+			wv.goBack();
+			return true;
+		}
+		return onKeyDown(keyCode, event);
+    }
+    
 	@Override
 	public void onTabReselected(Tab tab, FragmentTransaction ft) {
 		// TODO Auto-generated method stub
 		
 	}
 
-
 	@Override
 	public void onTabSelected(Tab tab, FragmentTransaction ft) {
 		// TODO Auto-generated method stub
 		viewPager.setCurrentItem(tab.getPosition());
 	}
-
 
 	@Override
 	public void onTabUnselected(Tab tab, FragmentTransaction ft) {
