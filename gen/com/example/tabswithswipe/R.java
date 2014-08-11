@@ -413,7 +413,7 @@ containing a value of this type.
     }
     public static final class id {
         public static final int RelativeLayout1=0x7f070017;
-        public static final int action_settings=0x7f07002e;
+        public static final int action_settings=0x7f07002f;
         public static final int actionbar=0x7f070018;
         public static final int book_now=0x7f070010;
         public static final int buy=0x7f07002d;
@@ -422,6 +422,7 @@ containing a value of this type.
         public static final int buy_with_google=0x7f07000e;
         public static final int classic=0x7f070011;
         public static final int footer=0x7f07002a;
+        public static final int givein=0x7f07002e;
         public static final int grayscale=0x7f070012;
         public static final int holo_dark=0x7f070005;
         public static final int holo_light=0x7f070006;
@@ -480,6 +481,7 @@ containing a value of this type.
     }
     public static final class string {
         public static final int _buy_house=0x7f050026;
+        public static final int _givein_house=0x7f050029;
         public static final int _map=0x7f050028;
         public static final int _nearby_search=0x7f050024;
         public static final int _rechoose=0x7f050027;
@@ -594,11 +596,6 @@ containing a value of this type.
         by AppBaseTheme from res/values-vXX/styles.xml on newer devices.
     
 
-            Theme customizations available in newer API levels can go in
-            res/values-vXX/styles.xml, while customizations related to
-            backward-compatibility can go here.
-        
-
         Base application theme for API 11+. This theme completely replaces
         AppBaseTheme from res/values/styles.xml on API 11+ devices.
     
@@ -608,7 +605,6 @@ containing a value of this type.
         AppBaseTheme from BOTH res/values/styles.xml and
         res/values-v11/styles.xml on API 14+ devices.
     
- API 14 theme customizations can go here. 
          */
         public static final int AppBaseTheme=0x7f040005;
         /**  Application theme. 

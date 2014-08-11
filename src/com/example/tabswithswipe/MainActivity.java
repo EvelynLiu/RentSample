@@ -54,10 +54,6 @@ public class MainActivity extends FragmentActivity implements ActionBar.TabListe
         actionBar.setNavigationMode(ActionBar.NAVIGATION_MODE_TABS);
         
         //Customize Action Bar
-        //actionBar.setDisplayHomeAsUpEnabled(false);
-        //actionBar.setDisplayShowHomeEnabled(true);
-        //actionBar.setDisplayUseLogoEnabled(false);
-        //((View)findViewById(android.R.id.home).getParent()).setVisibility(View.GONE);
         getActionBar().setIcon(android.R.color.transparent);
         actionBar.setLogo(android.R.color.transparent);
         actionBar.setDisplayShowTitleEnabled(false);
@@ -65,7 +61,6 @@ public class MainActivity extends FragmentActivity implements ActionBar.TabListe
         View mCustomView = mInflater.inflate(R.layout.custom_actionbar, null);
         actionBar.setCustomView(mCustomView);
         actionBar.setDisplayShowCustomEnabled(true);
-        //getActionBar().setDisplayOptions(0,ActionBar.DISPLAY_SHOW_HOME);
         
         //Adding Tabs
         for(String tab_name: tabs){

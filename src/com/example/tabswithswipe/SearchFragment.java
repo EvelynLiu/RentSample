@@ -46,7 +46,7 @@ public class SearchFragment extends Fragment implements OnItemClickListener{
 		}
 		return view;
 	}
-
+	
 	class MyTask extends AsyncTask<String, Void, Void>{
 		ProgressDialog pDialog;
 		
@@ -116,4 +116,5 @@ public class SearchFragment extends Fragment implements OnItemClickListener{
 	public void showToast(String msg) {
 		Toast.makeText(getActivity(), msg, Toast.LENGTH_SHORT).show();
 	}
+	
 }

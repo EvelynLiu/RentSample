@@ -4,6 +4,7 @@ import com.example.tabswithswipe.CollectFragment;
 import com.example.tabswithswipe.MemberFragment;
 import com.example.tabswithswipe.MoreFragment;
 import com.example.tabswithswipe.SearchFragment;
+import com.example.tabswithswipe.SearchRentFragment;
 
 import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentManager;
@@ -21,7 +22,7 @@ public class TabsPagerAdapter extends FragmentPagerAdapter{
 		// TODO Auto-generated method stub
 		switch(index){
 			case 0:
-				return new SearchFragment();
+				return new SearchRentFragment();
 			case 1:
 				return new CollectFragment();
 			case 2:
